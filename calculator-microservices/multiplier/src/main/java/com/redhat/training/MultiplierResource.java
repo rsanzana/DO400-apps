@@ -1,5 +1,17 @@
 package com.redhat.training;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
+import java.beans.Transient;
+
+import javax.ws.rs.WebApplicationException;
+import javax.ws.rs.core.Response;
+import org.jboss.resteasy.client.exception.ResteasyWebApplicationException;
+import org.junit.jupiter.api.function.Executable;
+import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
+
 import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -32,4 +44,6 @@ public class MultiplierResource implements MultiplierService {
         log.info("Multiplying {} to {}" ,lhs, rhs);
         return solverService.solve(lhs)*solverService.solve(rhs);
     }
-}
+
+  }
+
