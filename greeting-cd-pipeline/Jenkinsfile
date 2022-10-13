@@ -24,7 +24,7 @@ steps {
 
 sh '''
 
-oc start-build greeting-metrics \
+oc start-build greeting-metrics
 
 --follow --wait -n wnkruf-metrics
 
